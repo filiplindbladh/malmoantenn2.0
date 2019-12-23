@@ -1,0 +1,63 @@
+.Header {
+    height: calc(100vh - 146px);
+    background: rgb(226, 192, 216);
+    background: linear-gradient(
+        180deg,
+        rgba(226, 192, 216, 1) 19%,
+        rgba(236, 224, 140, 1) 81%
+    );
+    position: relative;
+}
+
+@media only screen and (max-width: 540px) {
+    .Header {
+        justify-content: center;
+    }
+    .Float {
+        opacity: 0.5;
+    }
+}
+
+@keyframes floating {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-12px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+.Float {
+    animation: floating 2s ease-in-out infinite;
+    height: 100%;
+    max-width: 95vw;
+    object-fit: cover;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Page-container {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+@media only screen and (max-width: 440px) {
+    .Page-container {
+        padding-top: 2rem;
+    }
+}
+
+.Description {
+    max-width: 30em;
+}

@@ -1,0 +1,22 @@
+.Loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: calc(100vh - 87px);
+}
+.Loader-img-logo {
+    width: 100px;
+    height: 100px;
+}
+.rotate {
+    animation: rotating 2s linear infinite;
+}
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

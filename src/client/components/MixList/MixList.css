@@ -1,0 +1,26 @@
+.MixList-Error {
+    display: flex;
+    align-items: center;
+}
+.MixList-Error p {
+    margin-left: 16px;
+}
+
+.my-masonry-grid {
+    display: flex;
+    width: auto;
+}
+.MixList-listItem {
+    padding-right: 32px;
+    background-clip: padding-box;
+}
+
+@media only screen and (max-width: 440px) {
+    .MixList-listItem {
+        padding-right: 0;
+    }
+}
+
+.MixList-listItem {
+    width: 100% !important;
+}

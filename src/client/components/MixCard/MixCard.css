@@ -1,0 +1,65 @@
+.MixCard {
+    cursor: pointer;
+}
+
+.Card-imgWrapper {
+    position: relative;
+}
+.MixCard:focus .Card-imgWrapper::before,
+.MixCard:hover .Card-imgWrapper::before {
+    content: "\0025B6";
+    color: white;
+    font-size: 48px;
+    background: rgba(0, 0, 0, 0.3);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.MixCard:focus .Date,
+.MixCard:hover .Date {
+    color: #8d3b72;
+}
+
+.MixCard:focus .Heading-small,
+.MixCard:hover .Heading-small {
+    color: #8d3b72;
+}
+
+@media only screen and (max-width: 440px) {
+    .MixCard {
+        padding-right: 0;
+    }
+}
+
+.Card-info {
+    padding: 16px 0;
+}
+
+.Card-img {
+    width: 100%;
+}
+
+.Date {
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.Tag {
+    background-color: black;
+    color: white;
+    padding: 6px;
+    margin-right: 6px;
+    font-size: 1rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+.Tags-container {
+    display: flex;
+}

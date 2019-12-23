@@ -1,0 +1,35 @@
+.Menu {
+    padding: 15px 33px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid lightgrey;
+}
+@media only screen and (max-width: 440px) {
+    .Menu {
+        padding: 16px;
+    }
+}
+
+.Logo {
+    height: 55px;
+}
+@media only screen and (max-width: 440px) {
+    .Logo {
+        display: none;
+    }
+}
+
+.Menu-navList {
+    display: flex;
+}
+
+.Menu-navItem {
+    margin-right: 12px;
+    font-family: "Soyuz Grotesk", sans-serif;
+}
+
+.Menu-socials svg {
+    margin-right: 12px;
+    font-size: 1.4rem;
+}
