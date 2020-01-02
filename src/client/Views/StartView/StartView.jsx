@@ -67,31 +67,34 @@ export default class StartView extends Component {
       });
   }
   render() {
-    if (this.state.isLoading) {
-      return <Loader />;
-    }
     return (
       <div className="StartView">
         {renderHelmet()}
-        <Header
-          description={this.state.description}
-          status={this.state.status}
-          isLive={this.state.isLive}
-        />
-        <div className="Page-container">
-          <EventsList events={this.state.events} />
-          <h2 className="Heading-medium">Blog</h2>
-          <BlogList blogposts={this.state.blogposts} />
-          <div>
-            <h2 className="Heading-medium">Archive</h2>
-          </div>
-          <MixList mixes={this.state.mixes.slice(0, 8)} isStartPage />
-          <div className="Pagination-buttonContainer">
-            <Link to="/archive">
-              <button className="Button">Archive</button>
-            </Link>
-          </div>
-        </div>
+        {this.state.isLoading ? (
+          <Loader />
+        ) : (
+          <>
+            <Header
+              description={this.state.description}
+              status={this.state.status}
+              isLive={this.state.isLive}
+            />
+            <div className="Page-container">
+              <EventsList events={this.state.events} />
+              <h2 className="Heading-medium">Blog</h2>
+              <BlogList blogposts={this.state.blogposts} />
+              <div>
+                <h2 className="Heading-medium">Archive</h2>
+              </div>
+              <MixList mixes={this.state.mixes.slice(0, 8)} isStartPage />
+              <div className="Pagination-buttonContainer">
+                <Link to="/archive">
+                  <button className="Button">Archive</button>
+                </Link>
+              </div>
+            </div>
+          </>
+        )}
       </div>
     );
   }

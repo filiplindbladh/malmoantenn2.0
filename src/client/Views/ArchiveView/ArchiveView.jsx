@@ -69,41 +69,44 @@ export default class ArchiveView extends Component {
       });
   }
   render() {
-    if (this.state.isLoading) {
-      return <Loader />;
-    }
     return (
       <div className="Page-container">
         <Helmet title="Malmö Antenn">
           <meta property="og:title" content="Malmö Antenn Archives" />
           <meta
             name="description"
-            content="Malmö Antenn is a small collective of music enthusiasts - aiming to connect music from around the globe."
+            content="Dig into our archieves and explore our shows"
           />
         </Helmet>
-        <h1 className="Heading-medium">Archive</h1>
-        <label className="Hidden" id="search-label" htmlFor="search-input">
-          Dig into our archives
-        </label>
-        <input
-          id="search-input"
-          type="search"
-          className="input"
-          placeholder="Search"
-          value={this.state.search}
-          aria-labelledby="search-label"
-          onChange={e => this.setState({ search: e.target.value })}
-        />
-        <MixList mixes={this.state.mixes} search={this.state.search} />
-        <div className="Pagination-buttonContainer">
-          {this.state.next !== "" &&
-            this.state.search.length === 0 &&
-            this.state.mixes.length !== 0 && (
-              <button className="Button" onClick={e => this.paginate()}>
-                Show more
-              </button>
-            )}
-        </div>
+        {this.state.isLoading ? (
+          <Loader />
+        ) : (
+          <>
+            <h1 className="Heading-medium">Archive</h1>
+            <label className="Hidden" id="search-label" htmlFor="search-input">
+              Dig into our archives
+            </label>
+            <input
+              id="search-input"
+              type="search"
+              className="input"
+              placeholder="Search"
+              value={this.state.search}
+              aria-labelledby="search-label"
+              onChange={e => this.setState({ search: e.target.value })}
+            />
+            <MixList mixes={this.state.mixes} search={this.state.search} />
+            <div className="Pagination-buttonContainer">
+              {this.state.next !== "" &&
+                this.state.search.length === 0 &&
+                this.state.mixes.length !== 0 && (
+                  <button className="Button" onClick={e => this.paginate()}>
+                    Show more
+                  </button>
+                )}
+            </div>
+          </>
+        )}
       </div>
     );
   }
