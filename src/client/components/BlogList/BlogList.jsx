@@ -10,11 +10,19 @@ const BlogList = ({ blogposts }) => {
     <div className="BlogList">
       {blogposts &&
         blogposts.map(post => {
+          console.log(post);
           return (
             post && (
-              <NavLink key={post.slug} to={post.slug}>
-                {post.title.rendered}
-              </NavLink>
+              <div style={{ width: "25%" }}>
+                <NavLink key={post.slug} to={post.slug}>
+                  <img
+                    style={{ width: "100%" }}
+                    src={post.acf.image.sizes.thumbnail}
+                    alt={post.title.rendered}
+                  ></img>
+                  <p>{post.title.rendered}</p>
+                </NavLink>
+              </div>
             )
           );
         })}
