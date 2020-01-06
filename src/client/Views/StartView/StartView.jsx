@@ -30,7 +30,7 @@ export default class StartView extends Component {
       .then(res => {
         this.setState({ mixes: res.data.data });
       })
-      .catch(function(error) {
+      .catch(error => {
         console.log(error);
       });
     axios
@@ -38,7 +38,7 @@ export default class StartView extends Component {
       .then(res => {
         this.setState({ events: res.data.events, isLoading: false });
       })
-      .catch(function(error) {
+      .catch(error => {
         console.log(error);
       });
     axios
@@ -46,7 +46,7 @@ export default class StartView extends Component {
       .then(res => {
         this.setState({ description: res.data.acf.description });
       })
-      .catch(function(error) {
+      .catch(error => {
         console.log(error);
       });
     axios
@@ -54,7 +54,7 @@ export default class StartView extends Component {
       .then(res => {
         this.setState({ blogposts: res.data });
       })
-      .catch(function(error) {
+      .catch(error => {
         console.log(error);
       });
     axios
@@ -62,7 +62,7 @@ export default class StartView extends Component {
       .then(res => {
         this.setState({ isLive: res.data.is_live });
       })
-      .catch(function(error) {
+      .catch(error => {
         console.log(error);
       });
   }

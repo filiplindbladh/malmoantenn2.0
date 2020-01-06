@@ -41,3 +41,7 @@ export const renderHelmet = () => {
     </>
   );
 };
+
+export const stripHtml = html => {
+  return html.replace(/<\/?[^>]+(>|$)/g, "");
+};

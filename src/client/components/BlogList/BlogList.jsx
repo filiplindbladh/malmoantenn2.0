@@ -10,7 +10,6 @@ const BlogList = ({ blogposts }) => {
     <div className="BlogList">
       {blogposts &&
         blogposts.map(post => {
-          console.log(post);
           return (
             post && (
               <div style={{ width: "25%" }}>
