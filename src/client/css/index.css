@@ -1,151 +1,173 @@
 @font-face {
-    font-family: "Soyuz Grotesk";
-    src: url("./fonts/SoyuzGrotesk-Bold.eot");
-    src: url("./fonts/SoyuzGrotesk-Bold.eot?#iefix") format("embedded-opentype"),
-        url("./fonts/SoyuzGrotesk-Bold.woff2") format("woff2"),
-        url("./fonts/SoyuzGrotesk-Bold.woff") format("woff"),
-        url("./fonts/SoyuzGrotesk-Bold.ttf") format("truetype");
-    text-rendering: optimizeLegibility;
-    font-display: swap;
+  font-family: "Soyuz Grotesk";
+  src: url("./fonts/SoyuzGrotesk-Bold.eot");
+  src: url("./fonts/SoyuzGrotesk-Bold.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/SoyuzGrotesk-Bold.woff2") format("woff2"),
+    url("./fonts/SoyuzGrotesk-Bold.woff") format("woff"),
+    url("./fonts/SoyuzGrotesk-Bold.ttf") format("truetype");
+  text-rendering: optimizeLegibility;
+  font-display: swap;
 }
 
 @import "https://rsms.me/inter/inter.css";
 
 body {
-    margin: 0;
-    overflow-x: hidden;
-    padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0;
 
-    font-family: "Inter", "Helvetica", -apple-system, "roboto", sans-serif;
+  font-family: "Inter", "Helvetica", -apple-system, "roboto", sans-serif;
 
-    @supports (font-variation-settings: normal) {
-        font-family: "Inter var", "Helvetica", -apple-system, "roboto",
-            sans-serif;
-    }
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  @supports (font-variation-settings: normal) {
+    font-family: "Inter var", "Helvetica", -apple-system, "roboto", sans-serif;
+  }
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 p {
-    line-height: 1.3;
+  line-height: 1.3;
 }
 
 a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 a:focus {
-    outline: none;
-    color: #8d3b72;
+  outline: none;
+  color: #8d3b72;
 }
 
 a:hover {
-    color: #8d3b72;
+  color: #8d3b72;
+}
+
+.Inverted {
+  color: white;
 }
 
 .Heading-large {
-    font-size: 4.5rem;
-    margin-bottom: 24px;
-    font-family: "Soyuz Grotesk", sans-serif;
-    border-bottom: 5px solid black;
-    display: inline-block;
+  font-size: 4.5rem;
+  margin-bottom: 1rem;
+  font-family: "Soyuz Grotesk", sans-serif;
+  border-bottom: 5px solid black;
+  display: inline-block;
+}
+
+.Heading-large.Inverted {
+  border-bottom: 5px solid white;
 }
 
 @media only screen and (max-width: 540px) {
-    .Heading-large {
-        font-size: 3rem;
-        margin-bottom: 24px;
-        border-bottom: 2.5px solid black;
-    }
+  .Heading-large {
+    font-size: 3rem;
+    margin-bottom: 24px;
+    border-bottom: 2.5px solid black;
+  }
 }
 
 @media only screen and (max-width: 340px) {
-    .Heading-large {
-        font-size: 2.5rem;
-        margin-bottom: 24px;
-        border-bottom: 2.5px solid black;
-    }
+  .Heading-large {
+    font-size: 2.5rem;
+    margin-bottom: 24px;
+    border-bottom: 2.5px solid black;
+  }
 }
 
 .Heading-medium {
-    font-size: 2rem;
-    margin-bottom: 24px;
-    font-family: "Soyuz Grotesk", sans-serif;
-    display: inline-block;
-    border-bottom: 2.5px solid black;
+  font-size: 2rem;
+  margin-bottom: 24px;
+  font-family: "Soyuz Grotesk", sans-serif;
+  display: inline-block;
+  border-bottom: 2.5px solid black;
 }
 
 .Heading-small {
-    font-weight: 600;
-    font-size: 1.5rem;
-    line-height: 1.3;
-    margin: 12px 0;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  margin: 12px 0;
 }
 
 input {
-    padding: 8px 16px;
-    border-radius: 2px;
-    margin: 8px 0 24px 0;
-    border: 1px solid black;
+  padding: 8px 16px;
+  border-radius: 2px;
+  margin: 8px 0 24px 0;
+  border: 1px solid black;
 }
 
 input:focus,
 button:focus {
-    outline: none;
-    box-shadow: 0 0 2px 1px #8d3b72;
-    border-color: #8d3b72;
+  outline: none;
+  box-shadow: 0 0 2px 1px #8d3b72;
+  border-color: #8d3b72;
 }
 
 .Page-container {
-    max-width: 1280px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 48px;
-    padding-left: 2rem;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 48px;
+  padding-left: 2rem;
 }
 
 .Bold {
-    font-weight: 800;
+  font-weight: 800;
 }
+
 .Button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid black;
-    border-radius: 2px;
-    padding: 8px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 2px;
+  padding: 8px 24px;
 }
 
 .Button:hover {
-    color: white;
-    background-color: #8d3b72;
-    border: 1px solid #8d3b72;
+  color: white;
+  background-color: #8d3b72;
+  border: 1px solid #8d3b72;
+}
+
+.Button--white {
+  color: white;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  margin-top: 1.5rem;
+}
+
+.Button--white:hover {
+  background-color: white;
+  color: black;
 }
 
 @media only screen and (max-width: 440px) {
-    .Page-container {
-        padding: 0 16px;
-    }
+  .Page-container {
+    padding: 0 16px;
+  }
 }
 
 @keyframes rotating {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .Hidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
