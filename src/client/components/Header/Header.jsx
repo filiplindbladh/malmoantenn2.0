@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Header.css";
 import HeaderLogo from "../../img/Gradient_wave_filil.svg";
 import LivePlayer from "../LivePlayer/LivePlayer";
@@ -7,10 +7,7 @@ import IndicatorDots from "./IndicatorDots";
 import Buttons from "./Buttons";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faArrowAltCircleRight,
-  faLongArrowAltRight
-} from "@fortawesome/free-solid-svg-icons";
+import { faLongArrowAltRight } from "@fortawesome/free-solid-svg-icons";
 
 export const renderHeader = (description, isLive) => {
   return (
