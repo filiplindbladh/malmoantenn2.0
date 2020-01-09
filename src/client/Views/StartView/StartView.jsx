@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Header from "../../components/Header/Header";
+import Hero from "../../components/Header/Header";
 import MixList from "../../components/MixList/MixList";
 import EventsList from "../../components/EventsList/EventsList";
 import axios from "axios";
@@ -74,11 +74,14 @@ export default class StartView extends Component {
           <Loader />
         ) : (
           <>
-            <Header
-              description={this.state.description}
-              status={this.state.status}
-              isLive={this.state.isLive}
-            />
+            <div style={{ height: "calc(100vh - 147px)" }}>
+              <Hero
+                description={this.state.description}
+                status={this.state.status}
+                isLive={this.state.isLive}
+                blogpost={this.state.blogposts[0]}
+              />
+            </div>
             <div className="Page-container">
               <EventsList events={this.state.events} />
               <h2 className="Heading-medium">Blog</h2>

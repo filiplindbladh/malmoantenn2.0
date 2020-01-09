@@ -12,8 +12,8 @@ const BlogList = ({ blogposts }) => {
         blogposts.map(post => {
           return (
             post && (
-              <div style={{ width: "25%" }}>
-                <NavLink key={post.slug} to={post.slug}>
+              <div key={post.slug} style={{ width: "25%" }}>
+                <NavLink to={post.slug}>
                   <img
                     style={{ width: "100%" }}
                     src={post.acf.image.sizes.thumbnail}
