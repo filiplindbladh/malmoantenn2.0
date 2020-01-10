@@ -1,0 +1,36 @@
+.Wrapper {
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+  bottom: 0;
+  text-align: center;
+}
+
+.Button {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  user-select: none;
+  appearance: none;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  bottom: 0;
+  font-size: 1rem;
+  color: white;
+  border: none;
+}
+.Button:hover {
+  background-color: white;
+  color: black;
+  outline: none;
+  border: none;
+}
+
+.Left {
+  left: 0;
+}
+
+.Right {
+  right: 0;
+}

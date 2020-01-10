@@ -65,6 +65,7 @@
 
 .Blog-description {
   font-size: 1.25rem;
+  border-bottom: 1px solid transparent;
 }
 
 .Link-blog {
@@ -72,9 +73,51 @@
   text-transform: uppercase;
   font-size: 1.25rem;
   margin-top: 1rem;
+  border-bottom: 1px solid transparent;
 }
 
-/* .Link-blog:hover {
-  border-bottom: 2px solid white;
+.Blog-routerLink {
+}
+
+.Blog-routerLink:hover .Link-blog,
+.Blog-routerLink:hover .Blog-description {
   color: white;
-}  */
+  border-bottom: 1px solid white;
+}
+
+@media only screen and (max-width: 1000px) {
+  .Blog-routerLink .Heading-large {
+    border-bottom: none;
+  }
+}
+
+.Blog-header {
+  background-size: cover;
+  background-position: top right;
+  height: 100%;
+  background-color: black;
+  filter: brightness(50%);
+}
+
+.Absolute-hack {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 99%;
+  height: 100%;
+  z-index: 100;
+}
+
+/* .Blog-header::after {
+  content: "";
+  min-height: 100%;
+  min-width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 200;
+  right: 0;
+  position: absolute;
+  filter: brightness(50%);
+} */

@@ -3,9 +3,9 @@ import "./Header.css";
 import HeaderLogo from "../../img/Gradient_wave_filil.svg";
 import LivePlayer from "../LivePlayer/LivePlayer";
 import Carousel from "re-carousel";
-import IndicatorDots from "./IndicatorDots";
-import Buttons from "./Buttons";
-import { Link } from "react-router-dom";
+import IndicatorDots from "./IndicatorDots/IndicatorDots";
+import Buttons from "./PaginationButtons/Buttons";
+import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLongArrowAltRight } from "@fortawesome/free-solid-svg-icons";
 
@@ -25,27 +25,23 @@ export const renderHeader = (description, isLive) => {
 export const renderBlogPost = blogpost => {
   if (blogpost) {
     return (
-      <Link to={blogpost.slug}>
+      <NavLink className="Blog-routerLink" to={blogpost.slug}>
         <header
+          className="Blog-header"
           style={{
-            backgroundImage: `url(${blogpost.acf.image.sizes.medium})`,
-            backgroundSize: "cover",
-            height: "100%"
+            backgroundImage: `url(${blogpost.acf.image.sizes.medium})`
           }}
-        >
-          <div className="Page-container">
-            <h1 className="Heading-large Inverted">
-              {blogpost.title.rendered}
-            </h1>
-            <p className="Blog-description Inverted">
-              Check out our favorite tunes from 2019.
-            </p>
-            <p className="Link-blog Inverted">
-              Go to blog <FontAwesomeIcon icon={faLongArrowAltRight} />
-            </p>
-          </div>
-        </header>
-      </Link>
+        ></header>
+        <div className="Page-container Absolute-hack">
+          <h1 className="Heading-large Inverted">{blogpost.title.rendered}</h1>
+          <p className="Blog-description Inverted">
+            Check out our favorite tunes from 2019.
+          </p>
+          <p className="Link-blog Inverted">
+            Go to blog <FontAwesomeIcon icon={faLongArrowAltRight} />
+          </p>
+        </div>
+      </NavLink>
     );
   } else {
     return null;
@@ -54,7 +50,7 @@ export const renderBlogPost = blogpost => {
 
 const Hero = ({ description, isLive, blogpost }) => {
   return (
-    <Carousel auto widgets={[IndicatorDots, Buttons]}>
+    <Carousel auto loop widgets={[IndicatorDots, Buttons]}>
       {renderHeader(description, isLive)}
       {renderBlogPost(blogpost)}
     </Carousel>

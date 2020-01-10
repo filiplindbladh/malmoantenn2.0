@@ -1,0 +1,17 @@
+.Dot {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  background-color: white;
+  margin: 7px 5px;
+  transition-duration: 300ms;
+}
+
+.Wrapper {
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+  bottom: 0px;
+  text-align: center;
+}
