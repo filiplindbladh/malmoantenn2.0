@@ -5,7 +5,7 @@ import EventsList from "../../components/EventsList/EventsList";
 import axios from "axios";
 import { apiKey, wpBaseUri, mixlrApi } from "../../../apiKey";
 import "./StartView.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Loader from "../../components/Loader/Loader";
 import { renderHelmet } from "./StartView.helpers";
 import BlogList from "../../components/BlogList/BlogList";
@@ -91,9 +91,9 @@ export default class StartView extends Component {
               </div>
               <MixList mixes={this.state.mixes.slice(0, 8)} isStartPage />
               <div className="Pagination-buttonContainer">
-                <Link to="/archive">
+                <NavLink to="/archive">
                   <button className="Button">Archive</button>
-                </Link>
+                </NavLink>
               </div>
             </div>
           </>

@@ -12,14 +12,17 @@ const BlogList = ({ blogposts }) => {
         blogposts.map(post => {
           return (
             post && (
-              <div key={post.slug} style={{ width: "25%" }}>
-                <NavLink to={post.slug}>
+              <div className="BlogList-card" key={post.slug}>
+                <NavLink className="BlogList-link" to={post.slug}>
                   <img
-                    style={{ width: "100%" }}
+                    className="BlogList-image"
                     src={post.acf.image.sizes.thumbnail}
                     alt={post.title.rendered}
                   ></img>
-                  <p>{post.title.rendered}</p>
+                  <span className="Date">
+                    {post.date.replace(/-/g, ".").slice(0, 10)}
+                  </span>
+                  <p className="Heading-small">{post.title.rendered}</p>
                 </NavLink>
               </div>
             )
