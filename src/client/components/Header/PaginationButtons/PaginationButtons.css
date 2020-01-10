@@ -6,7 +6,7 @@
   text-align: center;
 }
 
-.Button {
+.Pagination-Button {
   width: 2rem;
   height: 2rem;
   cursor: pointer;
@@ -19,8 +19,12 @@
   font-size: 1rem;
   color: white;
   border: none;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.Button:hover {
+.Pagination-Button:hover {
   background-color: white;
   color: black;
   outline: none;

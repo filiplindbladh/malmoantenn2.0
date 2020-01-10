@@ -11,12 +11,12 @@ export default function Buttons(props) {
   return (
     <div className="Wrapper">
       {(loop || index !== 0) && (
-        <div className="Left Button" onClick={prevHandler}>
+        <div className="Left Pagination-Button" onClick={prevHandler}>
           <FontAwesomeIcon icon={faLongArrowAltLeft} />
         </div>
       )}
       {(loop || index !== total - 1) && (
-        <div className="Right Button" onClick={nextHandler}>
+        <div className="Right Pagination-Button" onClick={nextHandler}>
           <FontAwesomeIcon icon={faLongArrowAltRight} />
         </div>
       )}
