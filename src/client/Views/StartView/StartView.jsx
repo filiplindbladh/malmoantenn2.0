@@ -50,7 +50,7 @@ export default class StartView extends Component {
         console.log(error);
       });
     axios
-      .get(`http://172.105.90.47/wp/wp-json/wp/v2/posts`)
+      .get(`${wpBaseUri}/wp/wp-json/wp/v2/posts`)
       .then(res => {
         this.setState({ blogposts: res.data });
       })
