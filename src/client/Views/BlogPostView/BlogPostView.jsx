@@ -53,7 +53,7 @@ export default class ArchiveView extends Component {
           />
           <meta
             property="og:image"
-           content="https://filil.se/wp/wp-content/uploads/2019/12/mabmc.jpg">
+            content="https://filil.se/wp/wp-content/uploads/2019/12/mabmc.jpg"
           />
           <meta
             property="og:url"
