@@ -82,6 +82,7 @@ export default class BlogPostView extends Component {
     }
     const title = post.map(post => post.title.rendered);
     const excerpt = post.map(post => stripHtml(post.excerpt.rendered));
+    console.log(title.toString());
     return (
       <div className="BlogPostView">
         <Helmet title={title}>
@@ -105,8 +106,9 @@ export default class BlogPostView extends Component {
           />
           <meta name="twitter:card" content={title} />
         </Helmet>
-
-        <h1 className="Heading-large">{title}</h1>
+        <div className="BlogPostView-headingContainer">
+          <h1 className="Heading-large">{title}</h1>
+        </div>
         <span className="Date">
           {post.map(date => date.modified.replace(/-/g, ".").slice(0, 10))}
         </span>

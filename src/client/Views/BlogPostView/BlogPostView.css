@@ -1,92 +1,92 @@
 .BlogPostView {
-    max-width: calc(680px + 2rem);
-    margin-left: auto;
-    margin-right: auto;
-    padding: 3rem 2rem;
+  max-width: calc(680px + 2rem);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3rem 2rem;
 }
 .BlogPostView .Heading-large {
-    border: none;
+  border: none;
 }
 .Editorial {
-    text-align: left;
+  text-align: left;
 }
 
-@media only screen and (min-width: 800px) {
-    .BlogPostView .Heading-large {
-        border-bottom: 5px solid black;
-    }
+.BlogPostView-headingContainer {
+  padding-top: 1rem;
+  border-bottom: 5px solid black;
+  margin-bottom: 1rem;
 }
 
 .Editorial blockquote {
-    border: 1px solid transparent;
-    border-top-color: lightgrey;
-    border-bottom-color: lightgrey;
-    text-align: center;
-    padding: 2rem 1rem;
-    margin: 1rem;
+  border: 1px solid transparent;
+  border-top-color: lightgrey;
+  border-bottom-color: lightgrey;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin: 1rem;
 }
 
 .Editorial blockquote p {
-    font-style: italic;
-    margin: 0;
-    font-size: 2rem;
-    line-height: 1.5;
+  font-style: italic;
+  margin: 0;
+  font-size: 2rem;
+  line-height: 1.5;
 }
 
 .Editorial a {
-    display: inline;
-    background: none;
-    font-weight: 500;
-    cursor: pointer;
-    text-decoration: none;
-    border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.6);
-    padding: 0;
+  display: inline;
+  background: none;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+  padding: 0;
 }
 
 .Editorial h2 {
-    font-weight: 600;
-    font-size: 1.5rem;
-    line-height: 1.3;
-    margin: 12px 0;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  margin: 12px 0;
 }
 .Editorial h3 {
-    margin-bottom: 0.25rem;
+  margin-bottom: 0.25rem;
 }
 .Editorial h4 {
-    margin-bottom: 0.25rem;
+  margin-bottom: 0.25rem;
 }
 .Editorial hr {
-    border-top-color: rgba(0, 0, 0, 0.6);
+  border-top-color: rgba(0, 0, 0, 0.6);
 }
 .Editorial ul {
-    text-align: left;
-    margin-top: 0;
+  text-align: left;
+  margin-top: 0;
 }
 .Editorial li {
-    line-height: 1.5;
-    padding: 1rem 0;
+  line-height: 1.5;
+  padding: 1rem 0;
 }
 .Editorial p {
-    line-height: 2rem;
-    margin-bottom: 2rem;
-    font-size: 1.25rem;
-    margin-top: 0;
+  line-height: 2rem;
+  margin-bottom: 2rem;
+  font-size: 1.25rem;
+  margin-top: 0;
 }
 .Editorial img {
-    width: 100%;
-    margin-bottom: 2rem;
+  width: 100%;
+  margin-bottom: 2rem;
 }
 
 .Editorial iframe {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 
 .Editorial em {
-    font-style: italic;
+  font-style: italic;
 }
 
 .Date {
-    padding: 2rem 0;
-    text-align: right;
+  padding: 2rem 0;
+  text-align: right;
 }
