@@ -8,12 +8,12 @@ import Helmet from "react-helmet";
 const renderMiddleware = () => (req, res) => {
   let html = req.html;
   const context = {};
-  const helmet = Helmet.renderStatic();
   const htmlContent = ReactDOMServer.renderToString(
     <StaticRouter location={req.url} context={context}>
       <App />
     </StaticRouter>
   );
+  const helmet = Helmet.renderStatic();
 
   const title = helmet.title.toString();
   const meta = helmet.meta.toString();
