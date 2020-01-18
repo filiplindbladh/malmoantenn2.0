@@ -33,6 +33,9 @@ export default class ArchiveView extends Component {
 
   render() {
     const { post, isLoading } = this.state;
+    const {
+      match: { params }
+    } = this.props;
     return (
       <div className="BlogPostView">
         <Helmet title="Malmö Antenn">
@@ -44,6 +47,36 @@ export default class ArchiveView extends Component {
             name="description"
             content={post.map(post => stripHtml(post.excerpt.rendered))}
           />
+          <meta
+            name="og:description"
+            content={post.map(post => stripHtml(post.excerpt.rendered))}
+          />
+          <meta
+            property="og:image"
+            content={post.map(post => post.acf.image.sizes.thumbnail)}
+          />
+          <meta
+            property="og:url"
+            content={`https://malmoantenn.se/${params.slug}`}
+          />
+
+          <meta
+            name="twitter:title"
+            content={post.map(post => post.title.rendered)}
+          />
+          <meta
+            name="twitter:description"
+            content={post.map(post => stripHtml(post.excerpt.rendered))}
+          />
+          <meta
+            name="twitter:image"
+            content={post.map(post => post.acf.image.sizes.thumbnail)}
+          />
+          <meta
+            name="twitter:card"
+            content={post.map(post => post.title.rendered)}
+          />
+          <meta property="og:site_name" content="Malmö Antenn" />
         </Helmet>
         {isLoading ? (
           <Loader />
