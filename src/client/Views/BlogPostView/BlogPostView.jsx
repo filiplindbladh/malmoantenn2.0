@@ -6,7 +6,7 @@ import Loader from "../../components/Loader/Loader";
 import { Helmet } from "react-helmet";
 import { stripHtml } from "../StartView/StartView.helpers";
 
-export default class ArchiveView extends Component {
+export default class BlogPostView extends Component {
   constructor(props) {
     super(props);
 
@@ -36,21 +36,18 @@ export default class ArchiveView extends Component {
     const {
       match: { params }
     } = this.props;
+
+    if (isLoading && post.length === 0) {
+      return <Loader />;
+    }
+    const title = post.map(post => post.title.rendered);
+    const excerpt = post.map(post => stripHtml(post.excerpt.rendered));
     return (
       <div className="BlogPostView">
-        <Helmet title={post.map(post => post.title.rendered)}>
-          <meta
-            property="og:title"
-            content={post.map(post => post.title.rendered)}
-          />
-          <meta
-            name="description"
-            content={post.map(post => stripHtml(post.excerpt.rendered))}
-          />
-          <meta
-            name="og:description"
-            content={post.map(post => stripHtml(post.excerpt.rendered))}
-          />
+        <Helmet title={title}>
+          <meta property="og:title" content={title} />
+          <meta name="description" content={excerpt} />
+          <meta name="og:description" content={excerpt} />
           <meta
             property="og:image"
             content="https://filil.se/wp/wp-content/uploads/2019/12/mabmc.jpg"
@@ -60,41 +57,25 @@ export default class ArchiveView extends Component {
             content={`https://malmoantenn.se/${params.slug}`}
           />
 
-          <meta
-            name="twitter:title"
-            content={post.map(post => post.title.rendered)}
-          />
-          <meta
-            name="twitter:description"
-            content={post.map(post => stripHtml(post.excerpt.rendered))}
-          />
+          <meta name="twitter:title" content={title} />
+          <meta name="twitter:description" content={excerpt} />
           <meta
             name="twitter:image"
             content={post.map(post => post.acf.image.sizes.thumbnail)}
           />
-          <meta
-            name="twitter:card"
-            content={post.map(post => post.title.rendered)}
-          />
+          <meta name="twitter:card" content={title} />
         </Helmet>
-        {isLoading ? (
-          <Loader />
-        ) : (
-          <>
-            <h1 className="Heading-large">
-              {post.map(title => title.title.rendered)}
-            </h1>
-            <span className="Date">
-              {post.map(date => date.modified.replace(/-/g, ".").slice(0, 10))}
-            </span>
-            <div
-              className="Editorial"
-              dangerouslySetInnerHTML={{
-                __html: post.map(content => content.content.rendered)
-              }}
-            ></div>
-          </>
-        )}
+
+        <h1 className="Heading-large">{title}</h1>
+        <span className="Date">
+          {post.map(date => date.modified.replace(/-/g, ".").slice(0, 10))}
+        </span>
+        <div
+          className="Editorial"
+          dangerouslySetInnerHTML={{
+            __html: post.map(content => content.content.rendered)
+          }}
+        ></div>
       </div>
     );
   }
