@@ -38,7 +38,7 @@ export default class ArchiveView extends Component {
     } = this.props;
     return (
       <div className="BlogPostView">
-        <Helmet title="Malmö Antenn">
+        <Helmet title={post.map(post => post.title.rendered)}>
           <meta
             property="og:title"
             content={post.map(post => post.title.rendered)}
@@ -76,7 +76,6 @@ export default class ArchiveView extends Component {
             name="twitter:card"
             content={post.map(post => post.title.rendered)}
           />
-          <meta property="og:site_name" content="Malmö Antenn" />
         </Helmet>
         {isLoading ? (
           <Loader />
