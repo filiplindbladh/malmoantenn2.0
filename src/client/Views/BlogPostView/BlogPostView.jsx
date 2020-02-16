@@ -40,41 +40,27 @@ export default class BlogPostView extends Component {
     if (isLoading && post.length === 0) {
       return (
         <div className="BlogPostView">
-          <Helmet title={"Malmö Antenn best of 2019"}>
-            <meta property="og:title" content={"Malmö Antenn best of 2019"} />
+          <Helmet title="Malmö Antenn - A web based radio from Sweden">
             <meta
-              name="description"
-              content={
-                "Our favorites from 2019 To celebrate our new blog we present a list of our favorite releases of 2019. Local talents, friends and superstars are all represented. Have a listen, get inspired, and support these great artists! Also check out the broadcast with Olle Trens and Machine Soul Studios summarizing the list and their fav..."
-              }
+              property="og:title"
+              content="Malmö Antenn - A web based radio from Sweden"
             />
             <meta
               name="og:description"
-              content={
-                "Our favorites from 2019 To celebrate our new blog we present a list of our favorite releases of 2019. Local talents, friends and superstars are all represented. Have a listen, get inspired, and support these great artists! Also check out the broadcast with Olle Trens and Machine Soul Studios summarizing the list and their fav..."
-              }
+              content="Malmö Antenn is a small collective of music enthusiasts - aiming to connect music from around the globe."
+            />
+            <meta
+              name="description"
+              content="Malmö Antenn is a small collective of music enthusiasts - aiming to connect music from around the globe."
             />
             <meta
               property="og:image"
-              content="https://filil.se/wp/wp-content/uploads/2019/12/mabmc.jpg"
+              content="https://malmoantenn.se/MalmoAntenn.jpg"
             />
             <meta
               property="og:url"
               content={`https://malmoantenn.se/${params.slug}`}
             />
-
-            <meta name="twitter:title" content={"Malmö Antenn best of 2019"} />
-            <meta
-              name="twitter:description"
-              content={
-                "Our favorites from 2019 To celebrate our new blog we present a list of our favorite releases of 2019. Local talents, friends and superstars are all represented. Have a listen, get inspired, and support these great artists! Also check out the broadcast with Olle Trens and Machine Soul Studios summarizing the list and their fav..."
-              }
-            />
-            <meta
-              name="twitter:image"
-              content="https://filil.se/wp/wp-content/uploads/2019/12/mabmc.jpg"
-            />
-            <meta name="twitter:card" content={"Malmö Antenn best of 2019"} />
           </Helmet>
           <Loader />
         </div>

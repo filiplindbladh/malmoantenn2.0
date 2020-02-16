@@ -64,8 +64,7 @@
 }
 
 .Blog-description {
-  font-size: 1.25rem;
-  border-bottom: 1px solid transparent;
+  font-size: 1rem;
 }
 
 .Link-blog {
@@ -76,17 +75,18 @@
   border-bottom: 1px solid transparent;
 }
 
-.Blog-routerLink {
-}
-
-.Blog-routerLink:hover .Link-blog,
-.Blog-routerLink:hover .Blog-description {
+.Blog-routerLink:hover .Link-blog {
   color: white;
   border-bottom: 1px solid white;
 }
+.Blog-routerLink {
+  cursor: pointer;
+}
 
 @media only screen and (max-width: 1000px) {
-  .Blog-routerLink .Heading-large {
+  .Blog-routerLink .Heading-large,
+  .Blog-routerLink:hover .Link-blog,
+  .Blog-routerLink:hover .Blog-description {
     border-bottom: none;
   }
 }
@@ -97,6 +97,7 @@
   height: 100%;
   background-color: black;
   filter: brightness(50%);
+  cursor: pointer;
 }
 
 .Absolute-hack {

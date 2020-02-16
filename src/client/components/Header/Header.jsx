@@ -8,6 +8,7 @@ import Buttons from "./PaginationButtons/Buttons";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLongArrowAltRight } from "@fortawesome/free-solid-svg-icons";
+import { stripHtml } from "../../Views/StartView/StartView.helpers";
 
 export const renderHeader = (description, isLive) => {
   return (
@@ -33,9 +34,12 @@ export const renderBlogPost = blogpost => {
           }}
         ></header>
         <div className="Page-container Absolute-hack">
-          <h1 className="Heading-large Inverted">{blogpost.title.rendered}</h1>
+          <h2 className="Heading-large Inverted">{blogpost.title.rendered}</h2>
           <p className="Blog-description Inverted">
-            Check out our favorite tunes from 2019.
+            {stripHtml(blogpost.excerpt.rendered).replace(
+              /\[&hellip;]/g,
+              "..."
+            )}
           </p>
           <p className="Link-blog Inverted">
             Go to blog <FontAwesomeIcon icon={faLongArrowAltRight} />
