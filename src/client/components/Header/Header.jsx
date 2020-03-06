@@ -9,6 +9,7 @@ import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLongArrowAltRight } from "@fortawesome/free-solid-svg-icons";
 import { stripHtml } from "../../Views/StartView/StartView.helpers";
+import { useMediaQuery } from "react-responsive";
 
 export const renderHeader = (description, isLive) => {
   return (
@@ -53,6 +54,11 @@ export const renderBlogPost = blogpost => {
 };
 
 const Hero = ({ description, isLive, blogpost }) => {
+  const isMobile = useMediaQuery({ query: "(max-width: 1024px)" });
+
+  if (isMobile) {
+    return renderHeader(description, isLive);
+  }
   return (
     <Carousel auto loop widgets={[IndicatorDots, Buttons]}>
       {renderHeader(description, isLive)}
