@@ -24,14 +24,14 @@ export const renderHeader = (description, isLive) => {
   );
 };
 
-export const renderBlogPost = blogpost => {
+export const renderBlogPost = (blogpost) => {
   if (blogpost) {
     return (
       <NavLink className="Blog-routerLink" to={blogpost.slug}>
         <header
           className="Blog-header"
           style={{
-            backgroundImage: `url(${blogpost.acf.image.sizes.medium})`
+            backgroundImage: `url(${blogpost.acf.image.sizes.medium})`,
           }}
         ></header>
         <div className="Page-container Absolute-hack">
@@ -60,7 +60,7 @@ const Hero = ({ description, isLive, blogpost }) => {
     return renderHeader(description, isLive);
   }
   return (
-    <Carousel auto loop widgets={[IndicatorDots, Buttons]}>
+    <Carousel auto loop={!isLive} widgets={[IndicatorDots, Buttons]}>
       {renderHeader(description, isLive)}
       {renderBlogPost(blogpost)}
     </Carousel>
