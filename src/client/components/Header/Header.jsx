@@ -1,6 +1,6 @@
 import React from "react";
 import "./Header.css";
-import HeaderLogo from "../../img/Gradient_wave_filil.svg";
+import HeaderLogo from "../../img/new-header.png";
 import LivePlayer from "../LivePlayer/LivePlayer";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

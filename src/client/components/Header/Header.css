@@ -1,12 +1,16 @@
 .Header {
   height: 100vh;
-  background: rgb(226, 192, 216);
-  background: linear-gradient(
-    180deg,
-    rgba(226, 192, 216, 1) 19%,
-    rgba(236, 224, 140, 1) 81%
-  );
+  background-color: black;
   position: relative;
+}
+
+.Header h1 {
+  color: white;
+  border-bottom: 5px solid white;
+}
+
+.Header .Description {
+  color: white;
 }
 
 @media only screen and (max-width: 540px) {
