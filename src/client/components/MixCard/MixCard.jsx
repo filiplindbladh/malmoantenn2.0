@@ -11,7 +11,10 @@ const MixCard = ({ url, picture, name, created, tags }) => {
     }
 
     return (
-        <div
+        <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
             tabIndex={0}
             data-mixcloud-play-button={url}
             className="MixCard"
@@ -40,7 +43,7 @@ const MixCard = ({ url, picture, name, created, tags }) => {
                     )}
                 </div>
             </div>
-        </div>
+        </a>
     );
 };
 

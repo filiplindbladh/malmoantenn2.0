@@ -1,5 +1,5 @@
 .Header {
-  height: calc(100vh - 146px);
+  height: 100vh;
   background: rgb(226, 192, 216);
   background: linear-gradient(
     180deg,

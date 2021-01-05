@@ -74,7 +74,7 @@ export default class StartView extends Component {
           <Loader />
         ) : (
           <>
-            <div style={{ height: "calc(100vh - 147px)" }}>
+            <div>
               <Hero
                 description={this.state.description}
                 status={this.state.status}
@@ -84,7 +84,6 @@ export default class StartView extends Component {
             </div>
             <div className="Page-container">
               <EventsList events={this.state.events} />
-              <h2 className="Heading-medium">Blog</h2>
               <BlogList blogposts={this.state.blogposts} />
               <div>
                 <h2 className="Heading-medium">Archive</h2>

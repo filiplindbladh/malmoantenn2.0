@@ -3,13 +3,14 @@ import "./BlogList.css";
 import { NavLink } from "react-router-dom";
 
 const BlogList = ({ blogposts }) => {
-  if (!blogposts) {
+  if (!blogposts || !blogposts.length) {
     return null;
   }
   return (
+    <>
+    <h2 className="Heading-medium">Blog</h2>
     <div className="BlogList">
-      {blogposts &&
-        blogposts.map(post => {
+        {blogposts.map(post => {
           return (
             post && (
               <div className="BlogList-card" key={post.slug}>
@@ -29,6 +30,7 @@ const BlogList = ({ blogposts }) => {
           );
         })}
     </div>
+    </>
   );
 };
 

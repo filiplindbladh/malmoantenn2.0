@@ -2,14 +2,14 @@ import React from "react";
 import "./Header.css";
 import HeaderLogo from "../../img/Gradient_wave_filil.svg";
 import LivePlayer from "../LivePlayer/LivePlayer";
-import Carousel from "re-carousel";
-import IndicatorDots from "./IndicatorDots/IndicatorDots";
-import Buttons from "./PaginationButtons/Buttons";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLongArrowAltRight } from "@fortawesome/free-solid-svg-icons";
 import { stripHtml } from "../../Views/StartView/StartView.helpers";
-import { useMediaQuery } from "react-responsive";
+// import { useMediaQuery } from "react-responsive";
+// import Carousel from "re-carousel";
+// import IndicatorDots from "./IndicatorDots/IndicatorDots";
+// import Buttons from "./PaginationButtons/Buttons";
 
 export const renderHeader = (description, isLive) => {
   return (
@@ -53,18 +53,8 @@ export const renderBlogPost = (blogpost) => {
   }
 };
 
-const Hero = ({ description, isLive, blogpost }) => {
-  const isMobile = useMediaQuery({ query: "(max-width: 1024px)" });
-
-  if (isMobile) {
+const Hero = ({ description, isLive }) => {
     return renderHeader(description, isLive);
-  }
-  return (
-    <Carousel auto loop={!isLive} widgets={[IndicatorDots, Buttons]}>
-      {renderHeader(description, isLive)}
-      {renderBlogPost(blogpost)}
-    </Carousel>
-  );
 };
 
 export default Hero;
